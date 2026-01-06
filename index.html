@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Master - Premium Learning Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <div class="logo-text">
+        <span class="main">JavaScript</span>
+        <span class="sub">MASTER</span>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search tutorials, exercises, projects...">
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fas fa-book"></i> Courses</a></li>
+      <li><a href="#"><i class="fas fa-project-diagram"></i> Projects</a></li>
+      <li><a href="#"><i class="fas fa-question-circle"></i> About</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="#" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- LEARNING INTERFACE -->
+  <div class="learning-interface" id="learningInterface">
+    <div class="learning-container">
+      <div class="topics-sidebar">
+        <div class="topics-header">
+          <h2>JavaScript Curriculum</h2>
+          <button class="close-learning" id="closeLearning">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!-- Topics will be dynamically populated -->
+      </div>
+
+      <div class="content-area">
+        <div class="content-header">
+          <div class="content-title">
+            <div class="content-icon">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <span>Welcome to JavaScript Master!</span>
+          </div>
+          <div class="content-description">
+            Select a topic from the sidebar to start learning. Each topic includes detailed definitions, types, key points, and practical examples.
+          </div>
+        </div>
+
+        <div class="definition-box">
+          <h3><i class="fas fa-info-circle"></i> What is JavaScript?</h3>
+          <div class="definition-content">
+            JavaScript is a programming language used to make web pages interactive. It runs in web browsers and can also run on servers.
+          </div>
+        </div>
+
+        <div class="key-points">
+          <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">
+            <i class="fas fa-star"></i> Key Features
+          </h3>
+          <ul>
+            <li>Learn JavaScript step-by-step with detailed definitions</li>
+            <li>Understand different types within each topic</li>
+            <li>Study 4 key points for each concept</li>
+            <li>Practice with beginner-friendly code examples</li>
+            <li>Interactive coding environment to test your learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-title">Learning Progress</div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div style="font-size: 14px; color: var(--text-muted); text-align: center;">
+        <span id="progressText">0% Complete</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="bg-elements">
+      <div class="bg-element"></div>
+      <div class="bg-element"></div>
+      <div class="bg-element"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Become a JavaScript<br><span>Master Developer</span></h1>
+        <p>
+          Master JavaScript from fundamentals to advanced concepts with our interactive platform. 
+          Learn with detailed definitions, types, and practical examples.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="#" class="btn primary" id="startLearningBtn">
+            <i class="fas fa-play-circle"></i> Start Learning Free
+          </a>
+          <a href="#" class="btn secondary">
+            <i class="fas fa-graduation-cap"></i> View Courses
+          </a>
+        </div>
+
+        <div style="margin-top: 50px; display: flex; gap: 30px;">
+          <div class="stat">
+            <h3 style="font-size: 32px; color: var(--primary); margin-bottom: 5px;">12+</h3>
+            <p style="color: var(--text-muted);">Topics Covered</p>
+          </div>
+          <div class="stat">
+            <h3 style="font-size: 32px; color: var(--primary); margin-bottom: 5px;">50+</h3>
+            <p style="color: var(--text-muted);">Detailed Types</p>
+          </div>
+          <div class="stat">
+            <h3 style="font-size: 32px; color: var(--primary); margin-bottom: 5px;">100%</h3>
+            <p style="color: var(--text-muted);">Beginner Friendly</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-illustration">
+        <div class="code-window">
+          <div class="window-header">
+            <div class="window-dot red"></div>
+            <div class="window-dot yellow"></div>
+            <div class="window-dot green"></div>
+            <div class="window-title">basics.js</div>
+          </div>
+          <div class="code-content">
+            <div class="code-line"><span class="line-number">1</span> <span class="code-comment">// JavaScript Basics</span></div>
+            <div class="code-line"><span class="line-number">2</span> <span class="code-keyword">let</span> message = <span class="code-string">"Hello Learner!"</span>;</div>
+            <div class="code-line"><span class="line-number">3</span> <span class="code-keyword">const</span> PI = <span class="code-number">3.14</span>;</div>
+            <div class="code-line"><span class="line-number">4</span></div>
+            <div class="code-line"><span class="line-number">5</span> <span class="code-keyword">function</span> <span class="code-function">greet</span>(name) {</div>
+            <div class="code-line"><span class="line-number">6</span>   <span class="code-keyword">return</span> <span class="code-string">`Hello </span><span class="code-variable">${name}</span><span class="code-string">`</span>;</div>
+            <div class="code-line"><span class="line-number">7</span> }</div>
+            <div class="code-line"><span class="line-number">8</span></div>
+            <div class="code-line"><span class="line-number">9</span> <span class="code-function">console</span>.<span class="code-function">log</span>(greet(<span class="code-string">"JavaScript Student"</span>));</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <h2 class="section-title">Why Learn With Us</h2>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Detailed Definitions</h3>
+        <p>Clear explanations of every JavaScript concept with beginner-friendly definitions.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-list-alt"></i>
+        </div>
+        <h3>All Types Covered</h3>
+        <p>Learn all variations and types within each topic (var/let/const, if/else, function types, etc.)</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Practical Examples</h3>
+        <p>Hands-on code examples for every concept to reinforce your learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>JavaScript Master</h3>
+        <p>The most comprehensive platform for mastering JavaScript with detailed definitions and examples.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get updates on new courses and exclusive content.</p>
+        <div style="margin-top: 20px;">
+          <input type="email" placeholder="Your email" style="width: 100%; padding: 12px; border-radius: 8px; background: var(--dark-card); border: 1px solid var(--dark-border); color: white; margin-bottom: 10px;">
+          <button class="btn primary" style="width: 100%;">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      &copy; 2023 JavaScript Master. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js">
+   
+  </script>
+</body>
+</html>
